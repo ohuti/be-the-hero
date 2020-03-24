@@ -5,7 +5,6 @@ module.exports = {
     const { page = 1 } = request.query
 
     const count = await connection('incidents').count().first()
-    console.log(count)
 
     const incidents = await connection('incidents')
       .select([
